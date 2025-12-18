@@ -3,4 +3,8 @@ project(Employee)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Employee main.cpp)
+add_executable(Employee main.cpp
+        Employee.h
+        Employee.cpp
+        PriorityQueue.h
+        PriorityQueue.cpp)
