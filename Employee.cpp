@@ -10,7 +10,7 @@ void Employee::setSalary(const int& salary) { this->salary = salary; }
 int Employee::getSalary() const { return salary; }
 std::string Employee::getName() const { return name; }
 std::string Employee::getID() const { return id; }
-int Employee::getExperience() const { return experience; }
+int Employee::getExperience() const { if (experience < 0) throw std::invalid_argument("[Error] Nice try Diddy, negative experience?!\n"); return experience; }
 Tester::Tester(const std::string& name, const std::string& id, const int& experience, const std::string& qualification) : Employee(name,id,"TST",experience), qualification(qualification) { calculateSalary(); }
 void Tester::calculateSalary() {
         int salary = 2000;
